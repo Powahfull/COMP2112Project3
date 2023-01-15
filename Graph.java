@@ -321,7 +321,7 @@ public static void main(String[] args) {
                 System.out.println("Exiting...");
                 break;
             default:
-                System.out.println("Invalid choice. Please enter a number between 1 and 7.");
+                System.out.println("Invalid choice, enter a number between 1 and 7.");
                 break;
         }
     } while (choice != 7);
@@ -329,3 +329,6 @@ public static void main(String[] args) {
 }
 
 }
+
+
+
