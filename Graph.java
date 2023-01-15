@@ -270,9 +270,9 @@ public static void main(String[] args) {
 
         switch (choice) {
             case 1:
-                System.out.println("Enter the name of the first node: ");
+                System.out.println("First node: ");
                 String name1 = scanner.next();
-                System.out.println("Enter the name of the second node: ");
+                System.out.println("Second node: ");
                 String name2 = scanner.next();
                 if (graph.isThereAPath(name1, name2)) {
                     System.out.println("There is a path between " + name1 + " and " + name2);
@@ -281,29 +281,29 @@ public static void main(String[] args) {
                 }
                 break;
             case 2:
-                System.out.println("Enter the name of the starting node: ");
+                System.out.println("Starting node: ");
                 String start = scanner.next();
-                System.out.println("Enter the name of the ending node: ");
+                System.out.println("Ending node: ");
                 String end = scanner.next();
                 graph.BFSfromTo(start, end);
                 break;
             case 3:
-                System.out.println("Enter the name of the starting node: ");
+                System.out.println("Starting node: ");
                 String startNode = scanner.next();
-                System.out.println("Enter the name of the ending node: ");
+                System.out.println("Ending node: ");
                 String endNode = scanner.next();
                 graph.DFSfromTo(startNode, endNode);
                 break;
             case 4:
-                System.out.print("Enter the name of the starting node: ");
-                name1 = scanner.nextLine();
+                System.out.print("Starting node: ");
+                name1 = scanner.next();
                 graph.NoOfVerticesInComponent(name1);
                 break;
             case 5:
-                System.out.print("Enter the name of the starting node: ");
-                name1 = scanner.nextLine();
-                System.out.print("Enter the name of the ending node: ");
-                name2 = scanner.nextLine();
+                System.out.print("Starting node: ");
+                name1 = scanner.next();
+                System.out.print("Ending node: ");
+                name2 = scanner.next();
                 int paths = graph.NoOfPathsFromTo(name1, name2);
                 if (paths == -1) {
                     System.out.println("Failed.");
@@ -311,9 +311,9 @@ public static void main(String[] args) {
                     System.out.println("Number of paths from " + name1 + " to " + name2 + ": " + paths);
                 }
             case 6:
-                System.out.print("Enter start vertex name: ");
+                System.out.print("Start vertex name: ");
                 String start1 = scanner.next();
-                System.out.print("Enter end vertex name: ");
+                System.out.print("End vertex name: ");
                 String end1 = scanner.next();
                 System.out.println("Shortest path length from " + start1 + " to " + end1 + ": " + graph.ShortestPathLengthFromTo(start1, end1));
                 break;
@@ -321,7 +321,7 @@ public static void main(String[] args) {
                 System.out.println("Exiting...");
                 break;
             default:
-                System.out.println("Invalid choice. Please enter a number between 1 and 6.");
+                System.out.println("Invalid choice. Please enter a number between 1 and 7.");
                 break;
         }
     } while (choice != 7);
@@ -329,5 +329,3 @@ public static void main(String[] args) {
 }
 
 }
-
-
